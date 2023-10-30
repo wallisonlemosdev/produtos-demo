@@ -1,0 +1,16 @@
+version: '3'
+services:
+  api-produtosdb:
+    image: postgres:latest
+    container_name: api-produtos
+    environment:
+      POSTGRES_DB: apiprodutosdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+networks:
+  app-network:
